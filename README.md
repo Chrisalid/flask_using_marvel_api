@@ -8,6 +8,7 @@ First you have to have Python installed on your computer to run the next command
 
 After running the above command open the terminal navigate to the directory where app.py is installed and then use the following command:
 ```python models.py```
+<br>
 The above command will make the database using postgres.
 <br>
 
