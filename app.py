@@ -1,29 +1,11 @@
 import models
-import time
 import requests
+from utils import hashcode
 from flask import Flask, render_template, request
-from hashlib import md5
-
-ts = str(time.time())
-private_key = 'b5a90fe03d91d295cac095be15516c070259e936'
-public_key = '869987b325cf1b23991e5babc934e8e7'
-
-join_string = bytes(ts+private_key+public_key, 'utf-8')
-
-hash = md5(join_string)
-
-hash_md5 = hash.hexdigest()
-
-
-''' Variables Used for API Consumption
-
-    Notes:
-        The variables above are the variables
-        used to consume the Marvel API
-'''
-
 
 app = Flask(__name__)
+
+ts, public_key, hash_md5 = hashcode()
 
 
 @app.route('/', methods=['POST', 'GET'])
