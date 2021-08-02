@@ -23,3 +23,11 @@ def hashcode():
     hash_md5 = hash.hexdigest()
 
     return ts, public_key, hash_md5
+
+
+def link(ts, public_key, hash_md5):
+    base = 'https://gateway.marvel.com'
+    req = '/v1/public/characters?name={}&orderBy=name&limit=1'
+    url = base+req+'&ts='+ts+'&apikey='+public_key+'&hash='+hash_md5
+
+    return url

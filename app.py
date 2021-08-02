@@ -1,6 +1,6 @@
 import models
 import requests
-from utils import hashcode
+from utils import hashcode, link
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -31,9 +31,9 @@ def characters_():
     characters = models.query_db(names)
 
     try:
-        base = 'https://gateway.marvel.com'
-        req = '/v1/public/characters?name={}&orderBy=name&limit=1'
-        URL = base+req+'&ts='+ts+'&apikey='+public_key+'&hash='+hash_md5
+
+        URL = link(ts, public_key, hash_md5)
+        print(URL)
 
         character_data = []
 
