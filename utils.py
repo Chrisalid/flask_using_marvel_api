@@ -26,6 +26,18 @@ def hashcode():
 
 
 def link(ts, public_key, hash_md5):
+    ''' Return URL of Marvel API
+    
+    Args:
+        ts: String
+        public_key = String
+        hash_md5 = String
+
+    Notes:
+        Use ts, public_key and hash_md5 for create
+        a URL to make request in Marvel API.
+    '''
+
     base = 'https://gateway.marvel.com'
     req = '/v1/public/characters?name={}&orderBy=name&limit=1'
     url = base+req+'&ts='+ts+'&apikey='+public_key+'&hash='+hash_md5
