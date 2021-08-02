@@ -27,7 +27,7 @@ def hashcode():
 
 def link(ts, public_key, hash_md5):
     ''' Return URL of Marvel API
-    
+
     Args:
         ts: String
         public_key = String
