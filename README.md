@@ -3,7 +3,7 @@ The objective of the project is to show Marvel Character Images using the reques
 <br>
 ### Run App
 First you have to have Python installed on your computer to run the next command:
-```pip install requirements.txt```.
+```pip install -m requirements.txt```.
 <br>
 
 After running the above command open the terminal navigate to the directory where app.py is installed and then use the following command:
